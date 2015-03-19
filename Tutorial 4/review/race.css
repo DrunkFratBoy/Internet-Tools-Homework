@@ -168,6 +168,7 @@
 		overflow-x: scroll;
 		overflow-y:scroll;
 		overflow: scroll;
+		white-space: nowrap;
 	}
 
 	figure img {
