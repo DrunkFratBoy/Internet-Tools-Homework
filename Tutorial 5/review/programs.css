@@ -33,3 +33,58 @@
 	border: solid 1px gray;
 	padding: 2px;
 } 
+
+tr {
+	height: 25px;
+}
+
+table thead {
+	color: white;
+	background: rgb(105, 177, 60);
+}
+
+table thead tr th {
+	font-size: 0.7em;
+	border: solid 1px gray;
+
+}
+
+table thead tr th:first-child {
+	background: rgb(153, 86, 7);
+}
+
+table th:nth-of-type(7) {
+	background: rgb(153 , 0, 153);
+}
+
+table th:nth-of-type(8) {
+	background: rgb(153 , 0, 153);
+}
+
+.timeColumn {
+	width: 10%;
+	background: rgb(215, 205, 151);
+}
+
+.wDayColumns {
+	width: 11%;
+	background: rgb(236, 255, 211);
+}
+
+.wEndColumns {
+	width: 17%;
+	background: rgb(255, 231, 255);
+}
+
+#intro  p {
+  -webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+
+         border-left: solid 1px black;
+          border-right: solid 1px black;
+
+}
