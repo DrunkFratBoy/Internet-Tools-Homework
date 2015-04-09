@@ -1,0 +1,35 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 5
+   Review Assignment
+
+   Programming Table Style Sheet
+   Author: James DuBois
+   Date:   4/8/2015
+
+   Filename:         programs.css
+   Supporting Files: 
+
+*/
+
+.programs {
+	width: 100%;
+	border: solid 2px black;
+	border-collapse: collapse;
+	font-family: "Arial", Verdana, san-serif;
+
+
+}
+
+.programs caption {
+	caption-side: bottom;
+	text-align: left;
+	font-size: 0.8em;
+}
+
+.programs tbody td  {
+	font-size: 0.7em;
+	vertical-align: top;
+	border: solid 1px gray;
+	padding: 2px;
+} 
