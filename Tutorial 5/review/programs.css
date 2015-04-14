@@ -83,8 +83,6 @@ table th:nth-of-type(8) {
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
-
-         border-left: solid 1px black;
-          border-right: solid 1px black;
+    column-rule: 1px solid black;
 
 }
