@@ -1,27 +1,10 @@
-/*
-   New Perspectives on HTML and CSS
-   Tutorial 6
-   Case Problem 3
-
-   Author:   Anna Lopez  
-   Date:     3/1/2014
-
-   Filename: rundemo.js
-
-   Purpose: The purpose of this program is to update the
-            appearance of the rendered text based on the styles
-            selected by the user from the form.
-
-
-*/
-
 function updatePreview() {
    formStyles=document.forms[0];
    inputtext=formStyles.sampletext.value;
 
    previewobject=document.getElementById("output");
    previewobject.innerHTML=inputtext.replace(/\n/g,"<br />");
-   
+
 
    ffi=formStyles.fontfamily.selectedIndex;
    previewobject.style.fontFamily=formStyles.fontfamily.options[ffi].text;
@@ -37,11 +20,11 @@ function updatePreview() {
 
    tti=formStyles.texttransform.selectedIndex;
    previewobject.style.textTransform=formStyles.texttransform.options[tti].text;
- 
+
    fvi=formStyles.fontvariant.selectedIndex;
    previewobject.style.fontVariant=formStyles.fontvariant.options[fvi].text;  
 
-   previewobject.style.color=formStyles.color.value;
+   previewobject.style.color=formStyles.fontcolor.value;
    previewobject.style.backgroundColor=formStyles.backgroundcolor.value;
 
    previewobject.style.fontSize=formStyles.fontsize.value + "px";
@@ -60,7 +43,7 @@ window.onload=function() {
    formStyles.textdecoration.onchange=updatePreview;
    formStyles.texttransform.onchange=updatePreview;
    formStyles.fontvariant.onchange=updatePreview;
-   formStyles.color.onchange=updatePreview;
+   formStyles.fontcolor.onchange=updatePreview;
    formStyles.backgroundcolor.onchange=updatePreview;
    formStyles.fontsize.onchange=updatePreview;
    formStyles.letterspacing.onchange=updatePreview;

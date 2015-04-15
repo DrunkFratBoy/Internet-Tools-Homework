@@ -21,9 +21,12 @@
       <title>CSS Styles Demo</title>
 
       <script src="modernizr-1.5.js"></script>
+      <script src="rundemo.js"></script>
 
       <link href="wm.css" rel="stylesheet" type="text/css" />
       <link href="cssforms.css" rel="stylesheet" type="text/css" />
+
+
 
    </head>
 
@@ -74,133 +77,135 @@
       </nav>
 
       <section>
-         <h1>CSS Demo</h1>
-         <p>Select the CSS style values from the form below and preview the
-            effect on the sample text in the preview box.
-         </p>
+     <h1>CSS Demo</h1>
+     <p>Select the CSS style values from the form below and preview the
+        effect on the sample text in the preview box.
+     </p>
 
-            <form>
-               <fieldset id="textstring">
-                  <label>Enter your sample text below</label>
-                     <textarea autofocus id="sampletext" tabindex="1" wrap="hard">
-                         
-                     </textarea>
-               </fieldset>
+        <form>
+           <fieldset id="textstring">
+              <label>Enter your sample text below</label>
+                 <textarea autofocus  tabindex="1" wrap="hard" name="sampletext" id="sampletext">
 
-               <fieldset id="fonts">
+                 </textarea>
+           </fieldset>
 
-                  <legend>
-                     Fonts:
-                  </legend>
+           <fieldset id="fonts">
 
-                  <label>Font Family</label>
-                  <select>
-                     <optgroup label="generic">
-                     <option value="default">default</option>
-                     <option value="serif">serif</option>
-                     <option value="sans-serif">sans-serif</option>
-                     <option value="monospace">monospace</option>
-                     <option value="cursive">cursive</option>
-                     <option value="fantasy">fantasy</option>
-                     </optgroup>
-                        <optgroup label="specific">
-                     <option value="Arial">Arial</option>
-                     <option value="'Book Antiqua'">'Book Antiqua'</option>
-                     <option value="'Courier New'">'Courier New'</option>
-                     <option value="Geneva">Geneva</option>
-                     <option value="Helvetica">Helvetica</option>
-                     <option value="Impact">Impact</option>
-                     <option value="Palatino">Palatino</option>
-                     <option value="'Times New Roman'">'Times New Roman'</option>
-                        </optgroup>
-                  </select>
+              <legend>
+                 Fonts
+              </legend>
 
-                  <label>Font Style</label>
-                     <select>
-                        <option value="normal">normal</option>
-                        <option value="italic">italic</option>
-                        <option value="oblique">oblique</option>
-                     </select>
+              <label for="fontfamily">Font Family</label>
+              <select id="fontfamily" name="fontfamily">
+                 <optgroup label="generic">
+                 <option value="default">default</option>
+                 <option value="serif">serif</option>
+                 <option value="sans-serif">sans-serif</option>
+                 <option value="monospace">monospace</option>
+                 <option value="cursive">cursive</option>
+                 <option value="fantasy">fantasy</option>
+                 </optgroup>
+                    <optgroup label="specific">
+                 <option value="Arial">Arial</option>
+                 <option value="'Book Antiqua'">'Book Antiqua'</option>
+                 <option value="'Courier New'">'Courier New'</option>
+                 <option value="Geneva">Geneva</option>
+                 <option value="Helvetica">Helvetica</option>
+                 <option value="Impact">Impact</option>
+                 <option value="Palatino">Palatino</option>
+                 <option value="'Times New Roman'">'Times New Roman'</option>
+                    </optgroup>
+              </select>
 
-                     <label>Font Weight</label>
-                        <select>
-                           <option value="normal">normal</option>
-                           <option value="bold">bold</option>
-                        </select>
+              <label for="fontstyle">Font Style</label>
+                 <select id="fontstyle" name="fontstyle">
+                    <option value="normal">normal</option>
+                    <option value="italic">italic</option>
+                    <option value="oblique">oblique</option>
+                 </select>
 
-                     <label>Text Decoration</label>
-                        <select>
-                           <option value="none">none</option>
-                           <option value="line-through">line-through</option>
-                           <option value="overline">overline</option>
-                           <option value="underline">underline</option>
-                        </select>
+                 <label for="fontweight">Font Weight</label>
+                    <select id="fontweight" name="fontweight">
+                       <option value="normal">normal</option>
+                       <option value="bold">bold</option>
+                    </select>
 
-                     <label>Text Transform</label>
-                        <select>
-                           <option value="none">none</option>
-                           <option value="capitalize">capitalize</option>
-                           <option value="lowercase">lowercase</option>
-                           <option value="uppercase">uppercase</option>
-                        </select>
+                 <label for="textdecoration">Text Decoration</label>
+                    <select id="textdecoration" name="textdecoration">
+                       <option value="none">none</option>
+                       <option value="line-through">line-through</option>
+                       <option value="overline">overline</option>
+                       <option value="underline">underline</option>
+                    </select>
 
-                     <label>Font Variant</label>
-                        <select>
-                           <option value="normal">normal</option>
-                           <option value="small-caps">small-caps</option>
-                        </select>
-               </fieldset>
+                 <label for="texttransform">Text Transform</label>
+                    <select id="texttransform" name="texttransform">
+                       <option value="none">none</option>
+                       <option value="capitalize">capitalize</option>
+                       <option value="lowercase">lowercase</option>
+                       <option value="uppercase">uppercase</option>
+                    </select>
 
-               <fieldset id="colors">
-                    
-                    <legend>
-                     Colors:
-                  </legend>
+                 <label for="fontvariant">Font Variant</label>
+                    <select id="fontvariant" name="fontvariant">
+                       <option value="normal">normal</option>
+                       <option value="small-caps">small-caps</option>
+                    </select>
+           </fieldset>
 
-                     <label>Font Color (hexadecimal)</label>
-                     <input type="color" value="#000000" placeholder="#rrggbb">
+           <fieldset id="colors">
 
-                     <label>Background Color (hexadecimal)</label>
-                     <input type="color" value="#FFFFF" placeholder="#rrggbb">
+                <legend>
+                 Colors
+              </legend>
 
+                 <label for="color">Font Color (hexadecimal)</label>
+                 <input type="color" value="#000000" placeholder="#rrggbb" name="fontcolor" id="fontcolor">
 
-
-               </fieldset>
-
-               <fieldset id="sizes">
-                    
-
-                    <legend>
-                     Sizes:
-                  </legend>
-
-                  <label>Font Size (px)</label>
-                     <input type="range" value="14" min="8" max="40" step="1">
-
-                  <label>Letter Spacing (px)</label>
-                     <input type="range" value="0" min="0" max="10" step="1">
-
-                  <label>Font Size (px)</label>
-                     <input type="range" value="14" min="8" max="40" step="1">
-
-                  <label>Font Size (px)</label>
-                     <input type="range" value="14" min="8" max="40" step="1">
-
-                  <label>Font Size (px)</label>
-                     <input type="range" value="14" min="8" max="40" step="1">
+                 <label for="color">Background Color (hexadecimal)</label>
+                 <input type="color" value="#FFFFF" placeholder="#rrggbb" name="backgroundcolor" id="backgroundcolor">
 
 
 
-               </fieldset>
+           </fieldset>
 
-            </form>
+           <fieldset id="sizes">
 
 
-         <h2>Rendered Text</h2>
-         <div id="output"></div>
-      </section>
+                <legend>
+                 Sizes
+              </legend>
 
-       
-   </body>
+              <label>Font Size (px)</label>
+                 <input type="range" value="14" min="8" max="40" step="1" name="fontsize" id="fontsize">
+
+              <label>Letter Spacing (px)</label>
+                 <input type="range" value="0" min="0" max="10" step="1" name="letterspacing" id="letterspacing">
+
+              <label>Word Spacing (px)</label>
+                 <input type="range" value="14" min="8" max="40" step="1" name="wordspacing" id="wordspacing">
+
+              <label>Line Height (em)</label>
+                 <input type="range" value="1" min="0" max="4" step="0.2" name="lineheight" id="lineheight">
+
+              <label>Text Indent (px)</label>
+                 <input type="range" value="0" min="0" max="10" step="1" name="textindent" id="textindent">
+
+
+
+           </fieldset>
+
+           <button type="button" id="removestyles">Remove Styles</button>
+
+        </form>
+
+
+     <h2>Rendered Text</h2>
+     <div id="output"></div>
+  </section>
+
+
+</body>
 
 </html>
